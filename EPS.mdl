@@ -20548,11 +20548,11 @@ Whether or not policies are ENABLED, changes in specific industries (from the va
 22:Year,Years,yr,yrs
 23:0
 15:0,0,0,0,0,0
-19:100,3
+19:80,0
 27:0,
 34:0,
 4:Time
-5:Perc Change in New LDV Fuel Economy due to Feebate
+5:Output Total CO2e Emissions
 35:Date
 36:YYYY-MM-DD
 37:2000
