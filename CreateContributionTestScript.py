@@ -21,7 +21,7 @@ OutputVarsFile = "OutputVarsToExport.lst" # The name of the file containing a li
 # Other Settings
 # --------------
 RunName = "MostRecentRun" # The desired name for all runs performed.  Used as the filename for the VDF files that Vensim creates
-EnableOrDisableGroups = "Enable" # Should each group be enabled or disabled in turn?
+EnableOrDisableGroups = "Disable" # Should each group be enabled or disabled in turn?
 								 # Essentially, this is testing either the contribution of a group in the proximity of the
 								 # BAU case ("Enable") or in the proximity of a scenario defined in the non-zero values of
 								 # the policies listed below ("Disable").
@@ -62,10 +62,11 @@ Group = 4
 # Transportation Sector Policies
 ElecPsgrLDVs = (False,"Percent Nonelec Vehicles Shifted to Elec[passenger,LDVs]","ElecPsgrLDVs",[0,1],1)
 ElecPsgrHDVs = (False,"Percent Nonelec Vehicles Shifted to Elec[passenger,HDVs]","ElecPsgrHDVs",[0,1],2)
-Feebate = (False,"LDVs Feebate Rate","Feebate",[0,2000],3)
+Feebate = (False,"LDVs Feebate Rate","Feebate",[0,1],3)
 FuelEconLDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[LDVs]","FuelEconLDVs",[0,1],4)
 FuelEconHDVs = (False,"Percentage Additional Improvement of Fuel Economy Std[HDVs]","FuelEconHDVs",[0,.66],5)
-TDM = (False,"Fraction of TDM Package Implemented","TDM",[0,1],6)
+PsgrTDM = (False,"Fraction of TDM Package Implemented[passenger]","PsgrTDM",[0,1],6)
+FrgtTDM = (False,"Fraction of TDM Package Implemented[freight]","FrgtTDM",[0,1],106)
 
 # Buildings and Appliances Sector Policies
 RebateHeating = (False,"Boolean Rebate Program for Efficient Components[heating]","RebateHeating",[0,1],7)
@@ -183,7 +184,7 @@ RmvBAUSubsidiesPetDies = (False,"Percent Reduction in BAU Subsidies[petroleum di
 # Every policy, whether enabled or not, appears on a list below called "PotentialPolicies".
 # Now we construct the actual list of policies to be included (named "Policies") by
 # checking which of the policies have been enabled.
-PotentialPolicies = (ElecPsgrLDVs, ElecPsgrHDVs, Feebate, FuelEconLDVs, FuelEconHDVs, TDM, RebateHeating, RebateCooling, RebateAppliances, BldgStdsUrbResHeating, BldgStdsUrbResCooling, BldgStdsUrbResEnvelope, BldgStdsUrbResLighting, BldgStdsUrbResAppliances, BldgStdsUrbResOther, BldgStdsRurResHeating, BldgStdsRurResCooling, BldgStdsRurResEnvelope, BldgStdsRurResLighting, BldgStdsRurResAppliances, BldgStdsRurResOther, BldgStdsComHeating, BldgStdsComCooling, BldgStdsComEnvelope, BldgStdsComLighting, BldgStdsComAppliances, BldgStdsComOther, ImprovedLabeling, ContractorEdu, ElecCpntUrbRes, ElecCpntRurRes, ElecCpntCom, RetrofittingHeating, RetrofittingCooling, RetrofittingEnvelope, RetrofittingLighting, RetrofittingAppliances, RetrofittingOther, DistSolarCarveOut, DistSolarSubsidy, RPS, DemandResponse, SubsidyNuclear, SubsidyWind, SubsidySolarPV, SubsidySolarTherm, SubsidyBiomass, EarlyRetCoal, EarlyRetNuclear, LifeExtNuclear, GridStorage, TransmissionGrowth, ReduceTnDLoss, RedDowntimeNGPreRet, RedDowntimeWindNew, RedDowntimeSolarPVNew, ChngElecImports, ChngElecExports, BanNewCoal, BanNewNGNonpeaker, BanNewNuclear, BanNewHydro, ReduceFGases, MethaneDestr, WorkerTraining, ClinkerSubst, MethaneCapture, EarlyRetIndustry, ImprSystemDesign, CogenWasteHeat, IndstSwitchFromCoal, IndstSwitchFromNG, IndstEffStdsCement, IndstEffStdsNGPS, IndstEffStdsIronSteel, IndstEffStdsChemicals, IndstEffStdsMining, IndstEffStdsWasteMgmt, IndstEffStdsAg, IndstEffStdsOtherInd, CroplandMgmt, RiceCultivMeasures, LivestockMeasures, SetAsides, AfforestAndReforest, ImprForestMgmt, ConvertNonCHPHeat, HeatSwitchFromCoal, CarbonTaxTrans, CarbonTaxElec, CarbonTaxResBldg, CarbonTaxComBldg, CarbonTaxIndst, CCSGrowth, FuelTaxElec, FuelTaxCoal, FuelTaxNatGas, FuelTaxPetGas, FuelTaxPetDies, RmvBAUSubsidiesCoal, RmvBAUSubsidiesNatGas, RmvBAUSubsidiesNucl, RmvBAUSubsidiesSolar, RmvBAUSubsidiesPetGas, RmvBAUSubsidiesPetDies)
+PotentialPolicies = (ElecPsgrLDVs, ElecPsgrHDVs, Feebate, FuelEconLDVs, FuelEconHDVs, PsgrTDM, FrgtTDM, RebateHeating, RebateCooling, RebateAppliances, BldgStdsUrbResHeating, BldgStdsUrbResCooling, BldgStdsUrbResEnvelope, BldgStdsUrbResLighting, BldgStdsUrbResAppliances, BldgStdsUrbResOther, BldgStdsRurResHeating, BldgStdsRurResCooling, BldgStdsRurResEnvelope, BldgStdsRurResLighting, BldgStdsRurResAppliances, BldgStdsRurResOther, BldgStdsComHeating, BldgStdsComCooling, BldgStdsComEnvelope, BldgStdsComLighting, BldgStdsComAppliances, BldgStdsComOther, ImprovedLabeling, ContractorEdu, ElecCpntUrbRes, ElecCpntRurRes, ElecCpntCom, RetrofittingHeating, RetrofittingCooling, RetrofittingEnvelope, RetrofittingLighting, RetrofittingAppliances, RetrofittingOther, DistSolarCarveOut, DistSolarSubsidy, RPS, DemandResponse, SubsidyNuclear, SubsidyWind, SubsidySolarPV, SubsidySolarTherm, SubsidyBiomass, EarlyRetCoal, EarlyRetNuclear, LifeExtNuclear, GridStorage, TransmissionGrowth, ReduceTnDLoss, RedDowntimeNGPreRet, RedDowntimeWindNew, RedDowntimeSolarPVNew, ChngElecImports, ChngElecExports, BanNewCoal, BanNewNGNonpeaker, BanNewNuclear, BanNewHydro, ReduceFGases, MethaneDestr, WorkerTraining, ClinkerSubst, MethaneCapture, EarlyRetIndustry, ImprSystemDesign, CogenWasteHeat, IndstSwitchFromCoal, IndstSwitchFromNG, IndstEffStdsCement, IndstEffStdsNGPS, IndstEffStdsIronSteel, IndstEffStdsChemicals, IndstEffStdsMining, IndstEffStdsWasteMgmt, IndstEffStdsAg, IndstEffStdsOtherInd, CroplandMgmt, RiceCultivMeasures, LivestockMeasures, SetAsides, AfforestAndReforest, ImprForestMgmt, ConvertNonCHPHeat, HeatSwitchFromCoal, CarbonTaxTrans, CarbonTaxElec, CarbonTaxResBldg, CarbonTaxComBldg, CarbonTaxIndst, CCSGrowth, FuelTaxElec, FuelTaxCoal, FuelTaxNatGas, FuelTaxPetGas, FuelTaxPetDies, RmvBAUSubsidiesCoal, RmvBAUSubsidiesNatGas, RmvBAUSubsidiesNucl, RmvBAUSubsidiesSolar, RmvBAUSubsidiesPetGas, RmvBAUSubsidiesPetDies)
 Policies = []
 for PotentialPolicy in PotentialPolicies:
 	if PotentialPolicy[Enabled]:
