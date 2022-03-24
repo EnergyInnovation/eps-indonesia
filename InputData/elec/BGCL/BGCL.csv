@@ -1,12 +1,17 @@
-Electricity Source,Lifetime (yr)
-coal,45
-natural gas nonpeaker,45
+Electricity Source,Lifetime (years)
+hard coal,30
+natural gas nonpeaker,25
 nuclear,60
-hydro,66
-wind,30
-solar PV,30
+hydro,50
+onshore wind,27
+solar PV,35
 solar thermal,30
-biomass,45
+biomass,25
 geothermal,30
-petroleum,45
-natural gas peaker,45
+petroleum,25
+natural gas peaker,25
+lignite,30
+offshore wind,27
+crude oil,25
+heavy or residual fuel oil,25
+municipal solid waste,25
