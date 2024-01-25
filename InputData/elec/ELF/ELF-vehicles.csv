@@ -1,7 +1,7 @@
 Unit: dimensionless (MW-peak/MW-avg),summer,winter
-LDVs,1.98466524,2.064733377
-HDVs,1.98466524,2.064733377
-aircraft,1.98466524,2.064733377
-rail,1.98466524,2.064733377
-ships,1.98466524,2.064733377
-motorbikes,1.98466524,2.064733377
+LDVs,1.98,2.06
+HDVs,1.98,2.06
+aircraft,1.98,2.06
+rail,1.98,2.06
+ships,1.98,2.06
+motorbikes,1.98,2.06
