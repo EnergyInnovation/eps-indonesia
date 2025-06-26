@@ -7,7 +7,7 @@ hydro,9.50E+04
 onshore wind,6.06E+04
 solar PV,1.98E+07
 solar thermal,1.98E+07
-biomass,3.26E+04
+biomass,5.04E+04
 geothermal,2.85E+04
 petroleum,153000
 natural gas peaker,9000000000000
@@ -18,7 +18,7 @@ heavy or residual fuel oil,153000
 municipal solid waste,32600
 hard coal w CCS,9000000000000
 natural gas combined cycle w CCS,9000000000000
-biomass w CCS,32600
+biomass w CCS,50400
 lignite w CCS,9000000000000
 small modular reactor,9000000000000
 hydrogen combustion turbine,9000000000000
