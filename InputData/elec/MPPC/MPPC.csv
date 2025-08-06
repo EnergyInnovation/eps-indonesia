@@ -1,5 +1,5 @@
 ,Minimum Capacity (MW)
-hard coal,280
+hard coal,100
 natural gas steam turbine,21
 natural gas combined cycle,163
 nuclear,500
@@ -11,7 +11,7 @@ biomass,18
 geothermal,13
 petroleum,50
 natural gas peaker,50
-lignite,280
+lignite,100
 offshore wind,5
 crude oil,13
 heavy or residual fuel oil,13
